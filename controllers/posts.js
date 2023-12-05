@@ -73,7 +73,7 @@ const getPosts = asyncHandle(async (req, res) => {
             {
                 model: db.Overview,
                 as: 'overviews',
-                attributes: ['created, createdAt'],
+                attributes: ['created'],
             },
         ],
         attributes: ['id', 'title', 'star', 'description', 'address', 'createdAt'],
