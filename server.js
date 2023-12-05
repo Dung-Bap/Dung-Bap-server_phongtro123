@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 8888;
 app.use(
     cors({
-        origin: process.env.CLIENT_URL,
+        origin: process.env.CLIENT_URL || process.env.CLIENT__DEPLOY_URL,
         methods: ['POST, PUT, GET, DELETE'],
         credentials: true, //credentials khi đăng ký tài khoản thì lưu vào cookie trình duyệt
     })
